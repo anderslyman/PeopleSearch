@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<ArrayOfArrayOfArrayOfString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ArrayOfArrayOfString>
+    <ArrayOfString>
+      <string>C:\Users\AndersLyman\Box Sync\Default Sync Folder\Source\PeopleSearch\PeopleSearch\PeopleSearch\Startup.cs</string>
+    </ArrayOfString>
+    <ArrayOfString>
+      <string>C:\Users\AndersLyman\Box Sync\Default Sync Folder\Source\PeopleSearch\PeopleSearch\PeopleSearch\DataContexts\DataContext.cs</string>
+    </ArrayOfString>
+    <ArrayOfString>
+      <string>C:\Users\AndersLyman\Box Sync\Default Sync Folder\Source\PeopleSearch\PeopleSearch\PeopleSearch\Global.asax.cs</string>
+    </ArrayOfString>
+    <ArrayOfString>
+      <string>C:\Users\AndersLyman\Box Sync\Default Sync Folder\Source\PeopleSearch\PeopleSearch\PeopleSearch\DataContexts\DbInitializer.cs</string>
+    </ArrayOfString>
+    <ArrayOfString>
+      <string>C:\Users\AndersLyman\Box Sync\Default Sync Folder\Source\PeopleSearch\PeopleSearch\PeopleSearch\Views\Contacts\Index.cshtml</string>
+    </ArrayOfString>
+    <ArrayOfString>
+      <string>C:\Users\AndersLyman\Box Sync\Default Sync Folder\Source\PeopleSearch\PeopleSearch\PeopleSearch\Views\Shared\_Layout.cshtml</string>
+    </ArrayOfString>
+  </ArrayOfArrayOfString>
+</ArrayOfArrayOfArrayOfString>

@@ -1,0 +1,30 @@
+﻿@model dynamic
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@Scripts.Render("/Content/tests/textServiceTests.js")
+
+<div ng-controller="testController">
+    <h1>JS Unit Tests</h1>
+    <br/>
+    <div class="container-fluid" ng-cloak>
+        <div class="row">
+            <div class="col-sm-12" ng-repeat="result in results track by $index">
+                <div class="row">
+                    <div class="col-sm-1">
+                        <p class="bg-danger text-center" ng-hide="result[2]">{{result[2]}}</p>
+                        <p class="bg-success text-center" ng-show="result[2]">{{result[2]}}</p>
+                    </div>
+                    <div class="col-sm-2">
+                        <strong>{{result[0]}}:</strong>
+                    </div>
+                    <div class="col-sm-9">
+                        {{result[1]}}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

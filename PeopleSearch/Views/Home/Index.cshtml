@@ -1,0 +1,52 @@
+﻿@model IEnumerable<PeopleSearch.Models.Contact>
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@Scripts.Render("/Content/js/contactsController.js")
+
+<div ng-controller="ContactsController">
+    <form class="form-horizontal">
+        <div class="form-group">
+            <label for="search" class="control-label">Search for a Contact:</label>
+            <input id="search" type="text" class="form-control" placeholder="Enter 2 or more letters..." ng-model="searchText" ng-change="search(searchText)">
+        </div>
+    </form>
+    <div class="container-fluid" ng-cloak>
+        <div id="loading" ng-show="loading"></div>
+        <div class="row" ng-show="contacts.length === 0 && !loading">
+            <div class="col-lg-12 col-md-12 col-sm-12">
+                No results found
+            </div>
+        </div>
+
+        <div class="row" ng-show="contacts.length > 0 && !loading">
+            <div class="col-lg-6 col-md-6 col-sm-6" ng-repeat="contact in contacts">
+                <div class="panel panel-default">
+                    <div class="panel-body">
+                        <div class="row">
+                            <div class="col-xs-5 col-sm-4 col-md-3">
+                                <img ng-src="/Content/images/{{contact.Photo}}" alt="profile picture" class="img-circle profile">
+                            </div>
+                            <div class="col-xs-7 col-sm-8 col-md-9">
+                                <strong ng-bind-html="highlight(contact.Name + ' ' + contact.Surname, searchText)"></strong> ({{getAge(contact.Birthdate)}})<br>
+                                <address>
+                                    {{contact.StreetAddress}}<br>
+                                    {{contact.City}}, {{contact.State}} {{contact.Zip}}<br>
+                                    <abbr title="Phone">P:</abbr> {{contact.Phone}}
+                                </address>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel-footer">
+                        <span ng-repeat="interest in getInterests(contact.Interests)">
+                            <span class="label label-default">{{interest}}</span>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
